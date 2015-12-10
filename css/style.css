@@ -1,0 +1,53 @@
+h2 {
+    color: #2d75b3;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #f8f8f8;
+}
+
+nav a {
+    color: #727277;
+    font-weight: bold;
+}
+
+.navLeft {
+    float: left;
+}
+
+.navRight {
+    float: right;
+}
+
+.jumbotron p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+}
+
+.jumbotron h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.6em;
+    color: black;
+}
+
+.jumbotron h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4em;
+    font-weight: inherit;
+    color: black;
+}
+
+.jumbotron {
+    border-radius: 5px;
+}
+
+footer {
+    padding-top: 5px;
+    border-top: solid 1px rgb(214, 214, 214);
+}
+
+#adminHeader h1 {
+    text-align: center;
+}
