@@ -32,4 +32,6 @@
     <![endif]-->
 
 </head>
-<?php
+
+<body>
+    <?php

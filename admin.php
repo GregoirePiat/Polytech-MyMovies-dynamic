@@ -78,24 +78,40 @@
                                                 <th>Login</th>
                                                 <th>Actions</th>
                                             </tr>
-                                            <tr>
-                                                <td>Diab</td>
-                                                <td>Nicolas</td>
-                                                <td>Strelytsia</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-default btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span></button>
-                                                    <button type="button" class="btn btn-default btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Gory</td>
-                                                <td>Alexandre</td>
-                                                <td>goryAlexandre</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-default btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span></button>
-                                                    <button type="button" class="btn btn-default btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-                                                </td>
-                                            </tr>
+                                            <?php
+                                            try{
+                                                $bdd = new PDO('mysql:host=localhost;dbname=mymovies;charset=utf8', 'mymovies_user', 'secret');
+                                            }
+                                            catch(Exception $e){
+                                                die('Erreur : ' . $e->getMessage());
+                                            }
+
+                                            try{
+                                                $response = $bdd->query('SELECT * FROM user;');
+                                                while ($datas = $response->fetch())
+                                                {
+                                                    echo('<tr>');
+                                                    echo('<td>');
+                                                    echo($datas['user_name']);
+                                                    echo('</td>');
+                                                    echo('<td>');
+                                                    echo($datas['user_firstname']);
+                                                    echo('</td>');
+                                                    echo('<td>');
+                                                    echo($datas['user_login']);
+                                                    echo('</td>');
+                                                    echo('<td>');
+                                                    echo('<button type="button" class="btn btn-default btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span></button>');
+                                                    echo('<button type="button" class="btn btn-default btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>');
+                                                    echo('</td>');
+                                                    echo('</tr>');
+                                                }
+
+                                            }
+                                            catch(Exception $errorRequest){
+                                                die('Erreur : ' . $e->getMessage());
+                                            }
+                                            ?>
                                         </table>
                                     </div>
                                 </div>

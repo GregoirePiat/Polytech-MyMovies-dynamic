@@ -15,7 +15,7 @@
             <!-- Partie de la barre masquée si la surface d'affichage est insuffisante -->
             <div class="collapse navbar-collapse" id="navbar-collapse-target">
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="#">Ajouter un film</a></li>
+                    <li class=""><a href="addFilm.php">Ajouter un film</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="admin.php"><span class="glyphicon glyphicon-cog"></span> Administration</a></li>
